@@ -31,8 +31,9 @@
     <div class="site-section">
       <div class="container">
         <div class="row">
+        @foreach($car as $cars)
           <div class="col-md-8 blog-content">
-            <img src="{{asset('assets/images/car_2.jpg')}}" alt="" class="img-fluid p-3 mb-5 bg-white rounded">
+            <img src="{{asset('assets/images/.$cars->image')}}" alt="" class="img-fluid p-3 mb-5 bg-white rounded">
             
             <div class="grey-bg container-fluid">
               <section id="minimal-statistics">
@@ -52,7 +53,7 @@
                               <i class="icon-pencil primary font-large-2 float-left"></i>
                             </div>
                             <div class="media-body text-right">
-                              <h3>4</h3>
+                              <h3>{{$cars->Doors}}</h3>
                               <span>Doors</span>
                             </div>
                           </div>
@@ -69,7 +70,7 @@
                               <i class="icon-speech warning font-large-2 float-left"></i>
                             </div>
                             <div class="media-body text-right">
-                              <h3>4</h3>
+                              <h3>{{$cars->Luggage}}</h3>
                               <span>Laggage</span>
                             </div>
                           </div>
@@ -86,7 +87,7 @@
                               <i class="icon-graph success font-large-2 float-left"></i>
                             </div>
                             <div class="media-body text-right">
-                              <h3>64.89 $</h3>
+                              <h3>{{$cars->price}} $</h3>
                               <span>Price</span>
                             </div>
                           </div>

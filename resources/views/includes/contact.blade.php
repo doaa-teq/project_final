@@ -18,8 +18,8 @@
             <div class="col-lg-5">
 
               <div class="intro">
-                <h1><strong>About</strong></h1>
-                <div class="custom-breadcrumbs"><a href="index.html">Home</a> <span class="mx-2">/</span> <strong>About</strong></div>
+                <h1><strong>Contact</strong></h1>
+                <div class="custom-breadcrumbs"><a href="index.html">Home</a> <span class="mx-2">/</span> <strong>contact</strong></div>
               </div>
 
             </div>
@@ -39,25 +39,26 @@
       </div>
         <div class="row">
           <div class="col-lg-8 mb-5" >
-            <form action="#" method="post">
+            <form action="{{route('contacts')}}" method="post" enctype="multipart/form-data" >
+              @csrf
               <div class="form-group row">
                 <div class="col-md-6 mb-4 mb-lg-0">
-                  <input type="text" class="form-control" placeholder="First name">
+                  <input type="text" class="form-control" placeholder="First name" name="first_name" value="{{old('first_name')}}">
                 </div>
                 <div class="col-md-6">
-                  <input type="text" class="form-control" placeholder="Last name">
+                  <input type="text" class="form-control" placeholder="Last name" name="last_name" value="{{old('last_name')}}">
                 </div>
               </div>
 
               <div class="form-group row">
                 <div class="col-md-12">
-                  <input type="text" class="form-control" placeholder="Email address">
+                  <input type="text" class="form-control" placeholder="Email address" name="email" value="{{old('email')}}">
                 </div>
               </div>
 
               <div class="form-group row">
                 <div class="col-md-12">
-                  <textarea name="" id="" class="form-control" placeholder="Write your message." cols="30" rows="10"></textarea>
+                  <textarea name="" id="" class="form-control" placeholder="Write your message." cols="30" rows="10" value="{{old('massege')}}"></textarea>
                 </div>
               </div>
               <div class="form-group row">
