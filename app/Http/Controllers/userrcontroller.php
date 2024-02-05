@@ -39,16 +39,16 @@ class userrcontroller extends Controller
 
             if(isset($request->Active)){
 
-                $use->Active = 0;
+                $use->Active = 1;
 
               }else{
 
-                $use->Active = 1;
+                $use->Active = 0;
 
-             }
+            }
              
-             $use->save();
-             return "cars data added sussessfully";
+         $use->save();
+         return "cars data added sussessfully";
     
 }
 public function messages(){
@@ -96,6 +96,7 @@ public function messages(){
      */
     public function destroy(string $id)
     {
-        //
+        Userr::where('id',$id)->delete();
+        return redirect ('userrs');
     }
 }

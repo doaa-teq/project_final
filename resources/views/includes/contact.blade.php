@@ -19,6 +19,7 @@
 
               <div class="intro">
                 <h1><strong>Contact</strong></h1>
+                <script src="https://cdn.tailwindcss.com"></script>
                 <div class="custom-breadcrumbs"><a href="index.html">Home</a> <span class="mx-2">/</span> <strong>contact</strong></div>
               </div>
 
@@ -39,7 +40,7 @@
       </div>
         <div class="row">
           <div class="col-lg-8 mb-5" >
-            <form action="{{route('contacts')}}" method="post" enctype="multipart/form-data" >
+            <form action="{{route('contact.send')}}" method="post" enctype="multipart/form-data" >
               @csrf
               <div class="form-group row">
                 <div class="col-md-6 mb-4 mb-lg-0">
@@ -58,7 +59,7 @@
 
               <div class="form-group row">
                 <div class="col-md-12">
-                  <textarea name="" id="" class="form-control" placeholder="Write your message." cols="30" rows="10" value="{{old('massege')}}"></textarea>
+                  <textarea name="massege" id="" class="form-control" placeholder="Write your message." cols="30" rows="10" value="{{old('massege')}}"></textarea>
                 </div>
               </div>
               <div class="form-group row">

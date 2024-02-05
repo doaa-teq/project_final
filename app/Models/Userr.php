@@ -14,6 +14,6 @@ class Userr extends Model
         'email',
         'Active',
         'password',
-        'registration_time',
+        
     ];
 }

@@ -11,23 +11,23 @@
 
     <!-- Bootstrap -->
     <link href="cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
-    <link href="{{asset('assets/vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assetss/vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="{{asset('assets/vendors/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assetss/vendors/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
     <!-- NProgress -->
-    <link href="{{asset('assets/vendors/nprogress/nprogress.css')}}" rel="stylesheet">
+    <link href="{{asset('assetss/vendors/nprogress/nprogress.css')}}" rel="stylesheet">
     <!-- iCheck -->
-    <link href="{{asset('assets/vendors/iCheck/skins/flat/green.css')}}" rel="stylesheet">
+    <link href="{{asset('assetss/vendors/iCheck/skins/flat/green.css')}}" rel="stylesheet">
     <!-- Datatables -->
     
-    <link href="{{asset('assets/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assetss/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assetss/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assetss/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assetss/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assetss/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="{{asset('assets/build/css/custom.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assetss/build/css/custom.min.css')}}" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -44,11 +44,11 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                <img src="{{asset('assetss/images/img.jpg')}}" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>John Doe</h2>
+                <h2>{{$contact->first_name}}</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -81,7 +81,7 @@
                 <li><a><i class="fa fa-desktop"></i> Testimonials <span class="fa fa-chevron-down"></span></a>
 									<ul class="nav child_menu">
 										<li><a href="{{route('addtestimonial')}}">Add Testimonials</a></li>
-										<li><a href="{{route('edittestimonial')}}">Edit Testimonials</a></li>
+										<li><a href="">Edit Testimonials</a></li>
 									</ul>
 								</li>
                 <li><a><i class="fa fa-desktop"></i> Messages <span class="fa fa-chevron-down"></span></a>
@@ -124,7 +124,7 @@
                 <ul class=" navbar-right">
                   <li class="nav-item dropdown open" style="padding-left: 15px;">
                     <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                      <img src="images/img.jpg" alt="">John Doe
+                      <img src="{{asset('assetss/images/img.jpg')}}" alt="">John Doe
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item"  href="javascript:;"> Profile</a>
@@ -145,7 +145,7 @@
                     <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
                       <li class="nav-item">
                         <a class="dropdown-item">
-                          <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                          <span class="image"><img src="{{asset('assetss/images/img.jpg')}}" alt="Profile Image" /></span>
                           <span>
                             <span>John Smith</span>
                             <span class="time">3 mins ago</span>
@@ -157,7 +157,7 @@
                       </li>
                       <li class="nav-item">
                         <a class="dropdown-item">
-                          <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                          <span class="image"><img src="{{asset('assetss/images/img.jpg')}}" alt="Profile Image" /></span>
                           <span>
                             <span>John Smith</span>
                             <span class="time">3 mins ago</span>
@@ -169,7 +169,7 @@
                       </li>
                       <li class="nav-item">
                         <a class="dropdown-item">
-                          <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                          <span class="image"><img src="{{asset('assetss/images/img.jpg')}}" alt="Profile Image" /></span>
                           <span>
                             <span>John Smith</span>
                             <span class="time">3 mins ago</span>
@@ -181,7 +181,7 @@
                       </li>
                       <li class="nav-item">
                         <a class="dropdown-item">
-                          <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                          <span class="image"><img src="{{asset('assetss/images/img.jpg')}}" alt="Profile Image" /></span>
                           <span>
                             <span>John Smith</span>
                             <span class="time">3 mins ago</span>
@@ -232,12 +232,12 @@
             <div class="row">
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
-                  <h2>Full Name: John Doe</h2>
+                  <h2>Full Name: {{$contact->first_name}} {{$contact->last_name}}</h2>
                   <br>
-                  <h2>Email: John@gmail.com</h2>
+                  <h2>Email: {{$contact->email}}</h2>
                    <br>
                   <h2>Message Content:</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi facilis, excepturi ipsum recusandae quidem doloribus veniam quisquam at, dignissimos autem quos iste libero sint architecto voluptatem consectetur possimus nobis.</p>
+                  <p>{{$contact->message}}</p>
                 </div>
               </div>
             </div>
@@ -257,34 +257,34 @@
     </div>
 
     <!-- jQuery -->
-    <script src="{{asset('assets/vendors/jquery/dist/jquery.min.js')}}"></script>
+    <script src="{{asset('assetss/vendors/jquery/dist/jquery.min.js')}}"></script>
     <!-- Bootstrap -->
-   <script src="{{asset('assets/vendors/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
+   <script src="{{asset('assetss/vendors/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
     <!-- FastClick -->
-    <script src="{{asset('assets/vendors/fastclick/lib/fastclick.js')}}"></script>
+    <script src="{{asset('assetss/vendors/fastclick/lib/fastclick.js')}}"></script>
     <!-- NProgress -->
-    <script src="{{asset('assets/vendors/nprogress/nprogress.js')}}"></script>
+    <script src="{{asset('assetss/vendors/nprogress/nprogress.js')}}"></script>
     <!-- iCheck -->
-    <script src="{{asset('assets/vendors/iCheck/icheck.min.js')}}"></script>
+    <script src="{{asset('assetss/vendors/iCheck/icheck.min.js')}}"></script>
     <!-- Datatables -->
-    <script src="{{asset('assets/vendors/datatables.net/js/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('assets/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
-    <script src="{{asset('assets/vendors/datatables.net-buttons/js/dataTables.buttons.min.js')}}"></script>
-    <script src="{{asset('assets/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js')}}"></script>
-    <script src="{{asset('assets/vendors/datatables.net-buttons/js/buttons.flash.min.js')}}"></script>
-    <script src="{{asset('assets/vendors/datatables.net-buttons/js/buttons.html5.min.js')}}"></script>
-    <script src="{{asset('assets/vendors/datatables.net-buttons/js/buttons.print.min.js')}}"></script>
-    <script src="{{asset('assets/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js')}}"></script>
-    <script src="{{asset('assets/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js')}}"></script>
-    <script src="{{asset('assets/vendors/datatables.net-responsive/js/dataTables.responsive.min.js')}}"></script>
-    <script src="{{asset('assets/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js')}}"></script>
-    <script src="{{asset('assets/vendors/datatables.net-scroller/js/dataTables.scroller.min.js')}}"></script>
-    <script src="{{asset('assets/vendors/jszip/dist/jszip.min.js')}}"></script>
-    <script src="{{asset('assets/vendors/pdfmake/build/pdfmake.min.js')}}"></script>
-    <script src="{{asset('assets/vendors/pdfmake/build/vfs_fonts.js')}}"></script>
+    <script src="{{asset('assetss/vendors/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('assetss/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
+    <script src="{{asset('assetss/vendors/datatables.net-buttons/js/dataTables.buttons.min.js')}}"></script>
+    <script src="{{asset('assetss/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js')}}"></script>
+    <script src="{{asset('assetss/vendors/datatables.net-buttons/js/buttons.flash.min.js')}}"></script>
+    <script src="{{asset('assetss/vendors/datatables.net-buttons/js/buttons.html5.min.js')}}"></script>
+    <script src="{{asset('assetss/vendors/datatables.net-buttons/js/buttons.print.min.js')}}"></script>
+    <script src="{{asset('assetss/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js')}}"></script>
+    <script src="{{asset('assetss/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js')}}"></script>
+    <script src="{{asset('assetss/vendors/datatables.net-responsive/js/dataTables.responsive.min.js')}}"></script>
+    <script src="{{asset('assetss/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js')}}"></script>
+    <script src="{{asset('assetss/vendors/datatables.net-scroller/js/dataTables.scroller.min.js')}}"></script>
+    <script src="{{asset('assetss/vendors/jszip/dist/jszip.min.js')}}"></script>
+    <script src="{{asset('assetss/vendors/pdfmake/build/pdfmake.min.js')}}"></script>
+    <script src="{{asset('assetss/vendors/pdfmake/build/vfs_fonts.js')}}"></script>
 
     <!-- Custom Theme Scripts -->
-    <script src="{{asset('assets/build/js/custom.min.js')}}"></script>
+    <script src="{{asset('assetss/build/js/custom.min.js')}}"></script>
 
   </body>
 </html>

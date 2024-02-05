@@ -88,6 +88,7 @@ class testimonialcontroller extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Testimonial::where('id',$id)->delete();
+        return redirect ('testimonials');
     }
 }

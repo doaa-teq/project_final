@@ -58,9 +58,11 @@
     Route::put('updateuser/{id}',[userrcontroller::class,'update'])->name('updateuser');//editcar the sae name that used in the blade file compined with id and using update functon 
     Route::get('restorecar/{id}',[carcontroller::class,'restore']);//editcar the sae name that used in the blade file compined with id 
     Route::get('messages', [contactcontroller::class, 'index'])->name('messages');
-    Route::get('infor',[contactcontroller::class,'show']);
+    Route::get('showmessage/{id}',[contactcontroller::class,'show']);
     Route::get('contacts', [contactcontroller::class,'create'])->name('contacts');
-    Route::post('adddd',[contactcontroller::class,'store'])->name('contactss');
+    Route::post('adddd',[contactcontroller::class,'send'])->name('contact.send');
+    Route::get('destroymessage/{id}', [contactcontroller::class,'destroy'])->name('destroy');
+    Route::get('destroycar/{id}', [carcontroller::class,'destroy'])->name('destroycar');
 
 Auth::routes(['verify'=>true]);
 

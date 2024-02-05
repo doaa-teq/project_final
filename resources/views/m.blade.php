@@ -265,7 +265,7 @@
                         @foreach($contacts as $cont)
                       <tbody>
                           <tr>
-                            <td>{{$cont->name}}</td>
+                            <td>{{$cont->first_name}}</td>
                             <td>{{$cont->email}}</td>
                             <td><a href="showmessage/{{$cont->id}}">Show</a></td>
                             <td><a href="destroymessage/{{$cont->id}}">destroy</a></td>

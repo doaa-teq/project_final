@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Contact;
+use App\Mail\ContaxtUs;
+use Mail;
 
 
 class contactcontroller extends Controller
@@ -34,14 +36,14 @@ class contactcontroller extends Controller
      */
     public function store(Request $request)
     {
-        $contact=new Contact;//we use the same names of the field inside the table
-            $contact->first_name=$request->full_name;
-            $contact->last_name=$request->last_name;
-            $contact->email=$request->email;
-            $contact->massege=$request->massege;
+        // $contact=new Contact;//we use the same names of the field inside the table
+        //     $contact->first_name=$request->full_name;
+        //     $contact->last_name=$request->last_name;
+        //     $contact->email=$request->email;
+        //     $contact->massege=$request->massege;
 
-            $contact->save();
-             return "cars data added sussessfully";
+        //     $contact->save();
+        //      return "cars data added sussessfully";
     }
 
     /**
@@ -49,7 +51,7 @@ class contactcontroller extends Controller
      */
     public function show(string $id)
     {
-        $contact=Car::findOrFail($id);
+        $contact=Contact::findOrFail($id);
         return view('showmessage',compact('contact'));
     }
 
@@ -74,6 +76,18 @@ class contactcontroller extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Contact::where('id',$id)->delete();
+        return redirect ('m');
+    }
+    public function send(Request $request){
+        $data=new Contact;//we use the same names of the field inside the table
+        $data->first_name=$request->first_name;
+        $data->last_name=$request->last_name;
+        $data->email=$request->email;
+        $data->massege=$request->massege;
+        $data->save();
+        Mail::to('doaadewedar63@gmail.com')->send(new ContaxtUs($data));
+        dd('sent');
+
     }
 }

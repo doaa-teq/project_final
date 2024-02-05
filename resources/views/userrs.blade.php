@@ -263,9 +263,9 @@
                           <td>{{$us->email}}</td>
                           <td>
                           @if($us->Active)
-                              true 👍
+                              1 👍
                           @else
-                              faulse 🤦‍♀️
+                              0 🤦‍♀️
                           @endif
                           </td>
                           <td><a href="edituser/{{$us->id}}">Edit</a></td>
